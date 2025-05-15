@@ -30,10 +30,6 @@
  //console.log(formatFullName('Ronin','Miller'));
     
 //    
-// Task 2: Write a function called calculateTotalCost that takes three parameters: price, quantity, and taxRate.
-// The function should calculate the total cost of items, including tax. Use the formula: totalCost = (price * quantity) * (1 + taxRate).
-// Ensure that price, quantity, and taxRate are all valid numbers. If any are invalid, return a string: “Invalid input.”
-
 // let p = Number('price');
 // let q = Number('quantity');
 // let t = Number('taxRate');
@@ -72,21 +68,21 @@
 
 
 
-function checkIfEligible(age , isEmployed){
-    let a = Number(age);
-    if (isNaN(a) || typeof isEmployed == false){
-        return "Invalid Input";
-    }
+// function checkIfEligible(age , isEmployed){
+//     let a = Number(age);
+//     if (isNaN(a) || typeof isEmployed == false){
+//         return "Invalid Input";
+//     }
 
-    if (a >= 18 && isEmployed){
-        return "Is Eligible";
+//     if (a >= 18 && isEmployed){
+//         return "Is Eligible";
 
-    } else {
-        return "Not Eligible";
-    }
-}
+//     } else {
+//         return "Not Eligible";
+//     }
+// }
 
-console.log(checkIfEligible(18, true));
+// console.log(checkIfEligible(18, true));
 
 
 
@@ -97,3 +93,32 @@ console.log(checkIfEligible(18, true));
 // Complete all the tasks outlined above.
 // Ensure that each task works as expected by testing it in your local development environment.
 // Once complete, submit your code by sharing the link to a GitHub repository containing the file via Canvas.
+
+
+let p = Number('price');
+let q = Number('quantity');
+let t = Number('taxRate');
+let d = Number('discount');
+
+
+function calculateTotalCost(){
+    if (isNaN(p)||isNaN(q)||isNaN(t) || isNaN(d)){
+        return "Invalid Input";
+    }
+
+
+let discountCost = p * q - d;
+
+    if (discountCost < 0) discountCost = 0;
+
+
+let totalCost = discountCost * (1+t);
+
+return parseFloat(totalCost).toFixed(2);
+}
+
+let result = calculateTotalCost;
+
+result = (20 * 2 - 4) * (1 + .07);
+
+console.log(result);
