@@ -70,17 +70,25 @@
 // If the person is 18 or younger, they are not eligible.
 // Return an appropriate string message for each scenario.
 
-let a = Number(age);
 
-function checkIfEligible(a , isEmployed){
 
-    if (isNaN(a) || typeof isEmployed !== boolean){
+function checkIfEligible(age , isEmployed){
+    let a = Number(age);
+    if (isNaN(a) || typeof isEmployed == false){
         return "Invalid Input";
     }
 
+    if (a >= 18 && isEmployed){
+        return "Is Eligible";
 
-
+    } else {
+        return "Not Eligible";
+    }
 }
+
+console.log(checkIfEligible(18, true));
+
+
 
 //Task 4: Refactoring for Reusability
 // Refactor the calculateTotalCost function from Task 2 to include an optional discount parameter. If the discount is provided, the function should subtract the discount from the total cost before applying tax.
