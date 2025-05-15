@@ -34,29 +34,29 @@
 // The function should calculate the total cost of items, including tax. Use the formula: totalCost = (price * quantity) * (1 + taxRate).
 // Ensure that price, quantity, and taxRate are all valid numbers. If any are invalid, return a string: “Invalid input.”
 
-let p = Number('price');
-let q = Number('quantity');
-let t = Number('taxRate');
+// let p = Number('price');
+// let q = Number('quantity');
+// let t = Number('taxRate');
 
 
 
-function calculateTotalCost(){
-    if (isNaN(p)||isNaN(q)||isNaN(t)){
-        return "Invalid Input";
-    }
+// function calculateTotalCost(){
+//     if (isNaN(p)||isNaN(q)||isNaN(t)){
+//         return "Invalid Input";
+//     }
 
 
 
-let totalCost =(p*q) * (1+t);
+// let totalCost =(p*q) * (1+t);
 
-return parseFloat(totalCost).toFixed(2);
-}
+// return parseFloat(totalCost).toFixed(2);
+// }
 
-let result = calculateTotalCost;
+// let result = calculateTotalCost;
 
-result = (20 * 2) * (1 + .07);
+// result = (20 * 2) * (1 + .07);
 
-console.log(result);
+// console.log(result);
 
 
 
@@ -70,6 +70,17 @@ console.log(result);
 // If the person is 18 or younger, they are not eligible.
 // Return an appropriate string message for each scenario.
 
+let a = Number(age);
+
+function checkIfEligible(a , isEmployed){
+
+    if (isNaN(a) || typeof isEmployed !== boolean){
+        return "Invalid Input";
+    }
+
+
+
+}
 
 //Task 4: Refactoring for Reusability
 // Refactor the calculateTotalCost function from Task 2 to include an optional discount parameter. If the discount is provided, the function should subtract the discount from the total cost before applying tax.
